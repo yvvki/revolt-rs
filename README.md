@@ -2,6 +2,21 @@
 
 ---
 
+## Prerequisities
+
+* Java 8 runtime at a minimum
+
+## Generating
+
+Run this to generate Rust library from Revolt OpenAPI specs at
+<https://raw.githubusercontent.com/revoltchat/api/master/OpenAPI.json>
+
+```sh
+npm run generate
+```
+
+---
+
 ## License
 
 Licensed under either of

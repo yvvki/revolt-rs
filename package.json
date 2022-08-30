@@ -4,7 +4,7 @@
   "description": "Revolt for Rust",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generate": "openapi-generator-cli generate -i https://raw.githubusercontent.com/revoltchat/api/master/OpenAPI.json --skip-validate-spec -g rust -c openapi-generator-config.json -o crates/api"
   },
   "repository": {
     "type": "git",
