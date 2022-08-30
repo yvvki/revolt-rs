@@ -1,0 +1,26 @@
+{
+  "name": "revolt-rs",
+  "version": "0.1.0",
+  "description": "Revolt for Rust",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yvvki/revolt-rs.git"
+  },
+  "keywords": [
+    "revolt",
+    "rust"
+  ],
+  "author": "Yuuki Rika",
+  "license": "MIT OR Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/yvvki/revolt-rs/issues"
+  },
+  "homepage": "https://github.com/yvvki/revolt-rs#readme",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.1"
+  }
+}
