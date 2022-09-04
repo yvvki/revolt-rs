@@ -77,7 +77,7 @@ impl Embed {
             colour: None,
             width,
             height,
-            size: Box::new(size),
+            size: super::box_option(size),
             media: None,
         }
     }

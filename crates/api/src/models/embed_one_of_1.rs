@@ -38,7 +38,7 @@ impl EmbedOneOf1 {
             url,
             width,
             height,
-            size: Box::new(size),
+            size: super::box_option(size),
         }
     }
 }

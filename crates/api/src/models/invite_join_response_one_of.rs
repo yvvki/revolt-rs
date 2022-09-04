@@ -28,7 +28,7 @@ impl InviteJoinResponseOneOf {
         InviteJoinResponseOneOf {
             _type,
             channels,
-            server: Box::new(server),
+            server: super::box_option(server),
         }
     }
 }

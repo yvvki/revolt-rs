@@ -21,7 +21,7 @@ pub struct DataDefaultChannelPermissionsAnyOf1 {
 impl DataDefaultChannelPermissionsAnyOf1 {
     pub fn new(permissions: Option<crate::models::ModelOverride>) -> DataDefaultChannelPermissionsAnyOf1 {
         DataDefaultChannelPermissionsAnyOf1 {
-            permissions: Box::new(permissions),
+            permissions: super::box_option(permissions),
         }
     }
 }

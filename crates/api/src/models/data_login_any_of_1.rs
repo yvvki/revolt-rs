@@ -28,7 +28,7 @@ impl DataLoginAnyOf1 {
     pub fn new(mfa_ticket: String, mfa_response: Option<crate::models::MfaResponse>) -> DataLoginAnyOf1 {
         DataLoginAnyOf1 {
             mfa_ticket,
-            mfa_response: Box::new(mfa_response),
+            mfa_response: super::box_option(mfa_response),
             friendly_name: None,
         }
     }

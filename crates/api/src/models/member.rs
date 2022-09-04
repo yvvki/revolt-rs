@@ -37,7 +37,7 @@ impl Member {
     pub fn new(_id: crate::models::MemberId, joined_at: Option<String>) -> Member {
         Member {
             _id: Box::new(_id),
-            joined_at: Box::new(joined_at),
+            joined_at: super::box_option(joined_at),
             nickname: None,
             avatar: None,
             roles: None,

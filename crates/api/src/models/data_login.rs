@@ -41,7 +41,7 @@ impl DataLogin {
             captcha: None,
             friendly_name: None,
             mfa_ticket,
-            mfa_response: Box::new(mfa_response),
+            mfa_response: super::box_option(mfa_response),
         }
     }
 }
