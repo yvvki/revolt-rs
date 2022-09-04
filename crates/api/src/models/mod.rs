@@ -524,3 +524,10 @@ pub mod voice_feature;
 pub use self::voice_feature::VoiceFeature;
 pub mod web_push_subscription;
 pub use self::web_push_subscription::WebPushSubscription;
+
+fn box_option<T>(value: Option<T>) -> Option<Box<T>> {
+    match value {
+        Some(value) => Some(Box::new(value)),
+        None => None
+    }
+}

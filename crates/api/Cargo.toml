@@ -1,7 +1,10 @@
 [package]
 name = "revolt_api"
 version = "0.5.5"
-authors = ["OpenAPI Generator team and contributors"]
+authors = [
+    "OpenAPI Generator team and contributors",
+    "Yuuki Rika",
+]
 edition = "2018"
 
 [dependencies]
