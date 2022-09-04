@@ -9,7 +9,7 @@
 ## Generating
 
 Run this to generate Rust library from Revolt OpenAPI specs at
-<https://raw.githubusercontent.com/revoltchat/api/master/OpenAPI.json>
+<https://api.revolt.chat/openapi.json>
 
 ```sh
 npm run generate
