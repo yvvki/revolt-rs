@@ -526,6 +526,9 @@ dependencies = [
 [[package]]
 name = "revolt"
 version = "0.1.0"
+dependencies = [
+ "revolt_api",
+]
 
 [[package]]
 name = "revolt_api"
