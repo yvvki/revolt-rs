@@ -3,3 +3,9 @@ members = [
     "crates/api/",
     "crates/lib/",
 ]
+
+[workspace.package]
+authors = ["Yuuki Rika"]
+license = "MIT OR Apache-2.0"
+description = "Rust typings for the Revolt API."
+repository = "https://github.com/yvvki/revolt-rs"
