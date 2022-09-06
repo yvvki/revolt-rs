@@ -3,7 +3,10 @@ name = "revolt"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors.workspace = true
+license.workspace = true
+description.workspace = true
+repository.workspace = true
 
 [dependencies]
-"revolt_api" = { path = "../api" }
+"revolt_api" = { version = "0.5", path = "../api" }
