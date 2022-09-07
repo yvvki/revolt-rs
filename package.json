@@ -2,9 +2,11 @@
   "name": "revolt-rs",
   "version": "0.1.0",
   "description": "Revolt for Rust",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "generate": "openapi-generator-cli generate -i https://api.revolt.chat/openapi.json --skip-validate-spec -g rust -c openapi-generator-config.json -o crates/api"
+    "generate": "openapi-generator-cli generate -i https://api.revolt.chat/openapi.json --skip-validate-spec -g rust -c openapi-generator-config.json -o crates/api",
+    "postgenerate": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/yvvki/revolt-rs#readme",
   "devDependencies": {
+    "@ltd/j-toml": "^1.35.2",
     "@openapitools/openapi-generator-cli": "^2.5.1"
   }
 }
