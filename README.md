@@ -1,4 +1,10 @@
-# Revolt for Rust
+# Revolute
+
+Rust typings for the Revolt API.
+
+[https://revolt.chat](https://revolt.chat)
+
+[![Rust](https://github.com/yvvki/revolt-rs/actions/workflows/rust.yml/badge.svg)](https://github.com/yvvki/revolt-rs/actions/workflows/rust.yml)
 
 ---
 

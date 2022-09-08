@@ -8,4 +8,4 @@ members = [
 authors = ["Yuuki Rika"]
 license = "MIT OR Apache-2.0"
 description = "Rust typings for the Revolt API."
-repository = "https://github.com/yvvki/revolt-rs"
+repository = "https://github.com/yvvki/revolute"
