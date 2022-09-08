@@ -1,5 +1,5 @@
 [package]
-name = "insurgent"
+name = "revolute"
 version = "0.1.0"
 edition = "2021"
 
@@ -8,5 +8,9 @@ license.workspace = true
 description.workspace = true
 repository.workspace = true
 
+[dependencies.revolt_api]
+path = "../api"
+version = "0.5"
+
 [dependencies]
-"revolt_api" = { version = "0.5", path = "../api" }
+async-std = { version = "1.12", features = ["attributes"] }
