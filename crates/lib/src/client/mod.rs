@@ -1,4 +1,4 @@
-use revolt_api::{
+use crate::{
     apis::{self, core_api::*},
     models::{self}
 };
