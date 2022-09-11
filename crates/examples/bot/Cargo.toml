@@ -9,5 +9,9 @@ license.workspace = true
 description.workspace = true
 repository.workspace = true
 
+[dependencies.revolute]
+version = "0.1"
+path = "../../lib"
+
 [dependencies]
-revolute = { version = "0.1", path = "../../lib" }
+tokio = { workspace = true }
