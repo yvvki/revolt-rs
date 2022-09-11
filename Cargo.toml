@@ -1,7 +1,9 @@
 [workspace]
 members = [
-    "crates/api/",
-    "crates/lib/",
+    "crates/api",
+    "crates/lib",
+
+    "crates/examples/bot"
 ]
 
 [workspace.package]

@@ -1,0 +1,13 @@
+[package]
+name = "bot"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+authors.workspace = true
+license.workspace = true
+description.workspace = true
+repository.workspace = true
+
+[dependencies]
+revolute = { version = "0.1", path = "../../lib" }
