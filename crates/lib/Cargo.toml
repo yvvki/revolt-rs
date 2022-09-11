@@ -1,6 +1,6 @@
 [package]
 name = "revolute"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 
 authors.workspace = true
@@ -13,4 +13,4 @@ path = "../api"
 version = "0.5"
 
 [dependencies]
-async-std = { version = "1.12", features = ["attributes"] }
+tokio = { version = "1.21", features = ["full"] }
