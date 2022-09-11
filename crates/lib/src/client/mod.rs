@@ -17,6 +17,10 @@ impl Client {
         Self::default()
     }
 
+    /// Fetches the configuration of the server.
+    /// 
+    /// Unlike [fetch_configuration], this function also fetches the
+    /// configuration if it has already been fethced before.
     pub async fn connect(&mut self)
     -> Result<(), apis::Error<RootRootError>>
     {
@@ -27,6 +31,8 @@ impl Client {
         Ok(())
     }
 
+    /// Fetches the configuration of the server if it has not been already
+    /// fetched.
     pub async fn fetch_configuration(&mut self)
     -> Result<(), apis::Error<RootRootError>>
     {
@@ -37,6 +43,7 @@ impl Client {
         Ok(())
     }
 
+    /// Update API object to use authentication.
     fn update_headers(&mut self) {
         self.configuration.basic_auth = Some((
             String::new(),
@@ -44,6 +51,7 @@ impl Client {
         ));
     }
 
+    /// Log in as a bot using a bot token.
     pub async fn login_bot(&mut self, token: String)
     -> Result<(), apis::Error<RootRootError>>
     {
