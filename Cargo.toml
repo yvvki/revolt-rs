@@ -11,3 +11,6 @@ authors = ["Yuuki Rika"]
 license = "MIT OR Apache-2.0"
 description = "Rust typings for the Revolt API."
 repository = "https://github.com/yvvki/revolute"
+
+[workspace.dependencies]
+tokio = { version = "1.21", features = ["full"] }
