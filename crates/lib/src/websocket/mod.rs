@@ -1,19 +1,10 @@
 use crate::Client;
 
+pub mod error;
+use error::Error;
+
 use tokio::net::TcpStream;
 use tokio_tungstenite::{connect_async, MaybeTlsStream, WebSocketStream};
-
-#[derive(Debug)]
-pub enum Error {
-    ConfigurationError,
-    TungsteniteError(tokio_tungstenite::tungstenite::Error),
-}
-
-impl From<tokio_tungstenite::tungstenite::Error> for Error {
-    fn from(error: tokio_tungstenite::tungstenite::Error) -> Self {
-        Self::TungsteniteError(error)
-    }
-}
 
 pub type WebSocketClient = WebSocketStream<MaybeTlsStream<TcpStream>>;
 
@@ -23,6 +14,11 @@ pub async fn connect(client: &Client) -> Result<WebSocketClient, Error> {
         .as_ref()
         .ok_or(Error::ConfigurationError)?
         .ws;
+
+    let session = client
+        .session
+        .as_ref()
+        .ok_or(Error::SessionError)?;
 
     let (mut socket, response) = connect_async(url).await?;
 
