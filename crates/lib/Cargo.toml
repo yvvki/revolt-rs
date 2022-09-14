@@ -14,3 +14,4 @@ version = "0.5"
 
 [dependencies]
 tokio = { workspace = true }
+tokio-tungstenite = { workspace = true }
