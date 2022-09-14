@@ -1,7 +1,7 @@
 use crate::Client;
 
-pub mod error;
-use error::Error;
+mod error;
+pub use error::Error;
 
 use tokio::net::TcpStream;
 use tokio_tungstenite::{connect_async, MaybeTlsStream, WebSocketStream};
