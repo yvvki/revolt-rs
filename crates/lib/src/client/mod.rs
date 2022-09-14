@@ -2,18 +2,18 @@ use crate::{
     apis::{self, core_api::*},
     models::{self}
 };
-
-#[derive(Debug, Default, Clone)]
+#[derive(Debug, Default)]
 pub struct Client {
     pub configuration: apis::configuration::Configuration,
 
+    pub websocket: Option<crate::websocket::WebSocketClient>,
     pub revolt_config: Option<revolt_api::models::RevoltConfig>,
 
     pub session: Option<String>,
 }
 
 impl Client {
-    pub fn new() -> Self {
+    pub async fn new() -> Self {
         Self::default()
     }
 
@@ -71,10 +71,8 @@ mod tests {
 
     #[tokio::test]
     async fn fetch_configuration() {
-        let mut client = Client::new();
+        let mut client = Client::new().await;
 
-        let result = client.fetch_configuration().await.unwrap();
-
-        assert_eq!(result, ());
+        client.fetch_configuration().await.unwrap();
     }
 }

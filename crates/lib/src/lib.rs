@@ -3,3 +3,5 @@ pub use revolt_api::models as models;
 
 pub mod client;
 pub use client::Client;
+
+pub mod websocket;
