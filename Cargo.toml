@@ -14,4 +14,3 @@ repository = "https://github.com/yvvki/revolute"
 
 [workspace.dependencies]
 tokio = { version = "1.21", features = ["full"] }
-tokio-tungstenite = { version = "0.17", features = ["native-tls"] }
