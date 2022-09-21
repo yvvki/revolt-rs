@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **width** | **i32** |  | 
 **height** | **i32** |  | 
 

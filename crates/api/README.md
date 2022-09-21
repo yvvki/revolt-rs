@@ -66,14 +66,14 @@ Class | Method | HTTP request | Description
 *InvitesApi* | [**invite_delete_req**](docs/InvitesApi.md#invite_delete_req) | **DELETE** /invites/{target} | Delete Invite
 *InvitesApi* | [**invite_fetch_req**](docs/InvitesApi.md#invite_fetch_req) | **GET** /invites/{target} | Fetch Invite
 *InvitesApi* | [**invite_join_req**](docs/InvitesApi.md#invite_join_req) | **POST** /invites/{target} | Join Invite
-*MFAApi* | [**create_ticket_create_ticket**](docs/MFAApi.md#create_ticket_create_ticket) | **PUT** /auth/mfa/ticket | Create MFA ticket
-*MFAApi* | [**fetch_recovery_fetch_recovery**](docs/MFAApi.md#fetch_recovery_fetch_recovery) | **POST** /auth/mfa/recovery | Fetch Recovery Codes
-*MFAApi* | [**fetch_status_fetch_status**](docs/MFAApi.md#fetch_status_fetch_status) | **GET** /auth/mfa/ | MFA Status
-*MFAApi* | [**generate_recovery_generate_recovery**](docs/MFAApi.md#generate_recovery_generate_recovery) | **PATCH** /auth/mfa/recovery | Generate Recovery Codes
-*MFAApi* | [**get_mfa_methods_get_mfa_methods**](docs/MFAApi.md#get_mfa_methods_get_mfa_methods) | **GET** /auth/mfa/methods | Get MFA Methods
-*MFAApi* | [**totp_disable_totp_disable**](docs/MFAApi.md#totp_disable_totp_disable) | **DELETE** /auth/mfa/totp | Disable TOTP 2FA
-*MFAApi* | [**totp_enable_totp_enable**](docs/MFAApi.md#totp_enable_totp_enable) | **PUT** /auth/mfa/totp | Enable TOTP 2FA
-*MFAApi* | [**totp_generate_secret_totp_generate_secret**](docs/MFAApi.md#totp_generate_secret_totp_generate_secret) | **POST** /auth/mfa/totp | Generate TOTP Secret
+*MfaApi* | [**create_ticket_create_ticket**](docs/MfaApi.md#create_ticket_create_ticket) | **PUT** /auth/mfa/ticket | Create MFA ticket
+*MfaApi* | [**fetch_recovery_fetch_recovery**](docs/MfaApi.md#fetch_recovery_fetch_recovery) | **POST** /auth/mfa/recovery | Fetch Recovery Codes
+*MfaApi* | [**fetch_status_fetch_status**](docs/MfaApi.md#fetch_status_fetch_status) | **GET** /auth/mfa/ | MFA Status
+*MfaApi* | [**generate_recovery_generate_recovery**](docs/MfaApi.md#generate_recovery_generate_recovery) | **PATCH** /auth/mfa/recovery | Generate Recovery Codes
+*MfaApi* | [**get_mfa_methods_get_mfa_methods**](docs/MfaApi.md#get_mfa_methods_get_mfa_methods) | **GET** /auth/mfa/methods | Get MFA Methods
+*MfaApi* | [**totp_disable_totp_disable**](docs/MfaApi.md#totp_disable_totp_disable) | **DELETE** /auth/mfa/totp | Disable TOTP 2FA
+*MfaApi* | [**totp_enable_totp_enable**](docs/MfaApi.md#totp_enable_totp_enable) | **PUT** /auth/mfa/totp | Enable TOTP 2FA
+*MfaApi* | [**totp_generate_secret_totp_generate_secret**](docs/MfaApi.md#totp_generate_secret_totp_generate_secret) | **POST** /auth/mfa/totp | Generate TOTP Secret
 *MessagingApi* | [**channel_ack_req**](docs/MessagingApi.md#channel_ack_req) | **PUT** /channels/{target}/ack/{message} | Acknowledge Message
 *MessagingApi* | [**message_bulk_delete_req**](docs/MessagingApi.md#message_bulk_delete_req) | **DELETE** /channels/{target}/messages/bulk | Bulk Delete Messages
 *MessagingApi* | [**message_delete_req**](docs/MessagingApi.md#message_delete_req) | **DELETE** /channels/{target}/messages/{msg} | Delete Message
@@ -307,7 +307,6 @@ Class | Method | HTTP request | Description
  - [MfaResponseAnyOf1](docs/MfaResponseAnyOf1.md)
  - [MfaResponseAnyOf2](docs/MfaResponseAnyOf2.md)
  - [MfaTicket](docs/MfaTicket.md)
- - [ModelOverride](docs/ModelOverride.md)
  - [MultiFactorStatus](docs/MultiFactorStatus.md)
  - [MutualResponse](docs/MutualResponse.md)
  - [NewRoleResponse](docs/NewRoleResponse.md)
@@ -316,6 +315,7 @@ Class | Method | HTTP request | Description
  - [OptionsFetchSettings](docs/OptionsFetchSettings.md)
  - [OptionsMessageSearch](docs/OptionsMessageSearch.md)
  - [OptionsQueryStale](docs/OptionsQueryStale.md)
+ - [Override](docs/Override.md)
  - [OverrideField](docs/OverrideField.md)
  - [OwnedBotsResponse](docs/OwnedBotsResponse.md)
  - [Permission](docs/Permission.md)

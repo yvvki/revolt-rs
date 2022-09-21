@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **code** | **String** | Invite code | 
 **channel_id** | **String** | Id of group channel | 
 **channel_name** | **String** | Name of group channel | 

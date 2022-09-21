@@ -14,27 +14,27 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct RAuthErrorOneOf15 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
 }
 
 impl RAuthErrorOneOf15 {
-    pub fn new(_type: Type) -> RAuthErrorOneOf15 {
+    pub fn new(r#type: RHashType) -> RAuthErrorOneOf15 {
         RAuthErrorOneOf15 {
-            _type,
+            r#type,
         }
     }
 }
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "DisallowedMFAMethod")]
-    DisallowedMFAMethod,
+    DisallowedMfaMethod,
 }
 
-impl Default for Type {
-    fn default() -> Type {
-        Self::DisallowedMFAMethod
+impl Default for RHashType {
+    fn default() -> RHashType {
+        Self::DisallowedMfaMethod
     }
 }
 

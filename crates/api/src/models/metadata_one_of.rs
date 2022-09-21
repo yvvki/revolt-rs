@@ -15,27 +15,27 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct MetadataOneOf {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
 }
 
 impl MetadataOneOf {
     /// File is just a generic uncategorised file
-    pub fn new(_type: Type) -> MetadataOneOf {
+    pub fn new(r#type: RHashType) -> MetadataOneOf {
         MetadataOneOf {
-            _type,
+            r#type,
         }
     }
 }
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "File")]
     File,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::File
     }
 }

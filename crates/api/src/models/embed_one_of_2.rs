@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct EmbedOneOf2 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     /// URL to the original video
     #[serde(rename = "url")]
     pub url: String,
@@ -29,9 +29,9 @@ pub struct EmbedOneOf2 {
 
 impl EmbedOneOf2 {
     /// Video
-    pub fn new(_type: Type, url: String, width: i32, height: i32) -> EmbedOneOf2 {
+    pub fn new(r#type: RHashType, url: String, width: i32, height: i32) -> EmbedOneOf2 {
         EmbedOneOf2 {
-            _type,
+            r#type,
             url,
             width,
             height,
@@ -41,13 +41,13 @@ impl EmbedOneOf2 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Video")]
     Video,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Video
     }
 }

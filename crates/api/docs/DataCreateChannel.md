@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | Option<[**crate::models::ChannelType**](ChannelType.md)> | Channel type | [optional]
+**r#type** | Option<[**crate::models::ChannelType**](ChannelType.md)> | Channel type | [optional]
 **name** | **String** | Channel name | 
 **description** | Option<**String**> | Channel description | [optional]
 **nsfw** | Option<**bool**> | Whether this channel is age restricted | [optional]

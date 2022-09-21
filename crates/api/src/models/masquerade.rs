@@ -20,7 +20,7 @@ pub struct Masquerade {
     /// Replace the avatar shown on this message (URL to image file)
     #[serde(rename = "avatar", skip_serializing_if = "Option::is_none")]
     pub avatar: Option<String>,
-    /// Replace the display role colour shown on this message  Must have `ManageRole` permission to use  This can be any valid CSS colour
+    /// Replace the display role colour shown on this message  Must have `ManageRole` permission to use
     #[serde(rename = "colour", skip_serializing_if = "Option::is_none")]
     pub colour: Option<String>,
 }

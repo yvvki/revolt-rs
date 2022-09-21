@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **id** | **String** |  | 
 **by** | **String** |  | 
 

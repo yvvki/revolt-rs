@@ -28,6 +28,9 @@ pub struct DataEditChannel {
     /// Whether this channel is age-restricted
     #[serde(rename = "nsfw", skip_serializing_if = "Option::is_none")]
     pub nsfw: Option<bool>,
+    /// Whether this channel is archived
+    #[serde(rename = "archived", skip_serializing_if = "Option::is_none")]
+    pub archived: Option<bool>,
     #[serde(rename = "remove", skip_serializing_if = "Option::is_none")]
     pub remove: Option<Vec<crate::models::FieldsChannel>>,
 }
@@ -40,6 +43,7 @@ impl DataEditChannel {
             owner: None,
             icon: None,
             nsfw: None,
+            archived: None,
             remove: None,
         }
     }

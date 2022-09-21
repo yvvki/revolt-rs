@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **_id** | **String** | Invite code | 
 **creator** | **String** | Id of user who created this invite | 
 **channel** | **String** | Id of the group channel this invite points to | 

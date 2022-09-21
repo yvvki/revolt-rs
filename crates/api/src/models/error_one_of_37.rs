@@ -14,26 +14,26 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ErrorOneOf37 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
 }
 
 impl ErrorOneOf37 {
-    pub fn new(_type: Type) -> ErrorOneOf37 {
+    pub fn new(r#type: RHashType) -> ErrorOneOf37 {
         ErrorOneOf37 {
-            _type,
+            r#type,
         }
     }
 }
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "InternalError")]
     InternalError,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::InternalError
     }
 }

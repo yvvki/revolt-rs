@@ -14,26 +14,26 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ErrorOneOf24 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
 }
 
 impl ErrorOneOf24 {
-    pub fn new(_type: Type) -> ErrorOneOf24 {
+    pub fn new(r#type: RHashType) -> ErrorOneOf24 {
         ErrorOneOf24 {
-            _type,
+            r#type,
         }
     }
 }
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "InvalidRole")]
     InvalidRole,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::InvalidRole
     }
 }

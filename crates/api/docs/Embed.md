@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **url** | Option<**String**> | URL for title | 
 **original_url** | Option<**String**> | Original direct URL | [optional]
 **special** | Option<[**crate::models::Special**](Special.md)> | Remote content | [optional]
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **colour** | Option<**String**> | CSS Colour | [optional]
 **width** | **i32** | Width of the video | 
 **height** | **i32** | Height of the video | 
-**size** | Option<[**crate::models::ImageSize**](ImageSize.md)> | Positioning and size | 
+**size** | [**crate::models::ImageSize**](ImageSize.md) | Positioning and size | 
 **media** | Option<[**crate::models::File**](File.md)> | ID of uploaded autumn file | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

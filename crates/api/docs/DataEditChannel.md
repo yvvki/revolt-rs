@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **owner** | Option<**String**> | Group owner | [optional]
 **icon** | Option<**String**> | Icon  Provide an Autumn attachment Id. | [optional]
 **nsfw** | Option<**bool**> | Whether this channel is age-restricted | [optional]
+**archived** | Option<**bool**> | Whether this channel is archived | [optional]
 **remove** | Option<[**Vec<crate::models::FieldsChannel>**](FieldsChannel.md)> |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

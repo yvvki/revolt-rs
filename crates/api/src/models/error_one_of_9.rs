@@ -14,26 +14,26 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ErrorOneOf9 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
 }
 
 impl ErrorOneOf9 {
-    pub fn new(_type: Type) -> ErrorOneOf9 {
+    pub fn new(r#type: RHashType) -> ErrorOneOf9 {
         ErrorOneOf9 {
-            _type,
+            r#type,
         }
     }
 }
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "NotFriends")]
     NotFriends,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::NotFriends
     }
 }

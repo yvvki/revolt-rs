@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **content_type** | [**crate::models::LightspeedType**](LightspeedType.md) |  | 
 **id** | **String** |  | 
 

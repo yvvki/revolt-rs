@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct SpecialOneOf4 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "content_type")]
     pub content_type: crate::models::TwitchType,
     #[serde(rename = "id")]
@@ -24,9 +24,9 @@ pub struct SpecialOneOf4 {
 
 impl SpecialOneOf4 {
     /// Twitch stream or clip
-    pub fn new(_type: Type, content_type: crate::models::TwitchType, id: String) -> SpecialOneOf4 {
+    pub fn new(r#type: RHashType, content_type: crate::models::TwitchType, id: String) -> SpecialOneOf4 {
         SpecialOneOf4 {
-            _type,
+            r#type,
             content_type,
             id,
         }
@@ -35,13 +35,13 @@ impl SpecialOneOf4 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Twitch")]
     Twitch,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Twitch
     }
 }

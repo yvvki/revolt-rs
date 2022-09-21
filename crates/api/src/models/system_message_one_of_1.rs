@@ -14,7 +14,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct SystemMessageOneOf1 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "id")]
     pub id: String,
     #[serde(rename = "by")]
@@ -22,9 +22,9 @@ pub struct SystemMessageOneOf1 {
 }
 
 impl SystemMessageOneOf1 {
-    pub fn new(_type: Type, id: String, by: String) -> SystemMessageOneOf1 {
+    pub fn new(r#type: RHashType, id: String, by: String) -> SystemMessageOneOf1 {
         SystemMessageOneOf1 {
-            _type,
+            r#type,
             id,
             by,
         }
@@ -33,13 +33,13 @@ impl SystemMessageOneOf1 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "user_added")]
     UserAdded,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::UserAdded
     }
 }

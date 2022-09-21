@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **url** | **String** | URL to the original video | 
 **width** | **i32** | Width of the video | 
 **height** | **i32** | Height of the video | 

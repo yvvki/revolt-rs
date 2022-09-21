@@ -14,15 +14,15 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct SystemMessageOneOf3 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "id")]
     pub id: String,
 }
 
 impl SystemMessageOneOf3 {
-    pub fn new(_type: Type, id: String) -> SystemMessageOneOf3 {
+    pub fn new(r#type: RHashType, id: String) -> SystemMessageOneOf3 {
         SystemMessageOneOf3 {
-            _type,
+            r#type,
             id,
         }
     }
@@ -30,13 +30,13 @@ impl SystemMessageOneOf3 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "user_joined")]
     UserJoined,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::UserJoined
     }
 }

@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct Error {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "max")]
     pub max: i32,
     #[serde(rename = "permission")]
@@ -28,9 +28,9 @@ pub struct Error {
 
 impl Error {
     /// Possible API Errors
-    pub fn new(_type: Type, max: i32, permission: crate::models::UserPermission, operation: String, with: String) -> Error {
+    pub fn new(r#type: RHashType, max: i32, permission: crate::models::UserPermission, operation: String, with: String) -> Error {
         Error {
-            _type,
+            r#type,
             max,
             permission,
             operation,
@@ -41,13 +41,13 @@ impl Error {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "FailedValidation")]
     FailedValidation,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::FailedValidation
     }
 }

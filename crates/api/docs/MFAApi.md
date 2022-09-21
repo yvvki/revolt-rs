@@ -1,17 +1,17 @@
-# \MFAApi
+# \MfaApi
 
 All URIs are relative to *https://api.revolt.chat*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_ticket_create_ticket**](MFAApi.md#create_ticket_create_ticket) | **PUT** /auth/mfa/ticket | Create MFA ticket
-[**fetch_recovery_fetch_recovery**](MFAApi.md#fetch_recovery_fetch_recovery) | **POST** /auth/mfa/recovery | Fetch Recovery Codes
-[**fetch_status_fetch_status**](MFAApi.md#fetch_status_fetch_status) | **GET** /auth/mfa/ | MFA Status
-[**generate_recovery_generate_recovery**](MFAApi.md#generate_recovery_generate_recovery) | **PATCH** /auth/mfa/recovery | Generate Recovery Codes
-[**get_mfa_methods_get_mfa_methods**](MFAApi.md#get_mfa_methods_get_mfa_methods) | **GET** /auth/mfa/methods | Get MFA Methods
-[**totp_disable_totp_disable**](MFAApi.md#totp_disable_totp_disable) | **DELETE** /auth/mfa/totp | Disable TOTP 2FA
-[**totp_enable_totp_enable**](MFAApi.md#totp_enable_totp_enable) | **PUT** /auth/mfa/totp | Enable TOTP 2FA
-[**totp_generate_secret_totp_generate_secret**](MFAApi.md#totp_generate_secret_totp_generate_secret) | **POST** /auth/mfa/totp | Generate TOTP Secret
+[**create_ticket_create_ticket**](MfaApi.md#create_ticket_create_ticket) | **PUT** /auth/mfa/ticket | Create MFA ticket
+[**fetch_recovery_fetch_recovery**](MfaApi.md#fetch_recovery_fetch_recovery) | **POST** /auth/mfa/recovery | Fetch Recovery Codes
+[**fetch_status_fetch_status**](MfaApi.md#fetch_status_fetch_status) | **GET** /auth/mfa/ | MFA Status
+[**generate_recovery_generate_recovery**](MfaApi.md#generate_recovery_generate_recovery) | **PATCH** /auth/mfa/recovery | Generate Recovery Codes
+[**get_mfa_methods_get_mfa_methods**](MfaApi.md#get_mfa_methods_get_mfa_methods) | **GET** /auth/mfa/methods | Get MFA Methods
+[**totp_disable_totp_disable**](MfaApi.md#totp_disable_totp_disable) | **DELETE** /auth/mfa/totp | Disable TOTP 2FA
+[**totp_enable_totp_enable**](MfaApi.md#totp_enable_totp_enable) | **PUT** /auth/mfa/totp | Enable TOTP 2FA
+[**totp_generate_secret_totp_generate_secret**](MfaApi.md#totp_generate_secret_totp_generate_secret) | **POST** /auth/mfa/totp | Generate TOTP Secret
 
 
 

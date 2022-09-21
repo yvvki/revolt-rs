@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **max** | **i32** |  | 
 **permission** | [**crate::models::UserPermission**](UserPermission.md) |  | 
 **operation** | **String** |  | 

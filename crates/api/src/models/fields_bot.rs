@@ -16,7 +16,7 @@ pub enum FieldsBot {
     #[serde(rename = "Token")]
     Token,
     #[serde(rename = "InteractionsURL")]
-    InteractionsURL,
+    InteractionsUrl,
 
 }
 
@@ -24,7 +24,7 @@ impl ToString for FieldsBot {
     fn to_string(&self) -> String {
         match self {
             Self::Token => String::from("Token"),
-            Self::InteractionsURL => String::from("InteractionsURL"),
+            Self::InteractionsUrl => String::from("InteractionsURL"),
         }
     }
 }

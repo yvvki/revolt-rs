@@ -14,15 +14,15 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct RAuthErrorOneOf {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "with")]
     pub with: String,
 }
 
 impl RAuthErrorOneOf {
-    pub fn new(_type: Type, with: String) -> RAuthErrorOneOf {
+    pub fn new(r#type: RHashType, with: String) -> RAuthErrorOneOf {
         RAuthErrorOneOf {
-            _type,
+            r#type,
             with,
         }
     }
@@ -30,13 +30,13 @@ impl RAuthErrorOneOf {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "IncorrectData")]
     IncorrectData,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::IncorrectData
     }
 }

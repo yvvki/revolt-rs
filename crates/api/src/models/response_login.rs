@@ -55,12 +55,12 @@ impl ResponseLogin {
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
 pub enum Result {
     #[serde(rename = "MFA")]
-    MFA,
+    Mfa,
 }
 
 impl Default for Result {
     fn default() -> Result {
-        Self::MFA
+        Self::Mfa
     }
 }
 

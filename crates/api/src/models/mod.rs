@@ -346,8 +346,6 @@ pub mod mfa_response_any_of_2;
 pub use self::mfa_response_any_of_2::MfaResponseAnyOf2;
 pub mod mfa_ticket;
 pub use self::mfa_ticket::MfaTicket;
-pub mod model_override;
-pub use self::model_override::ModelOverride;
 pub mod multi_factor_status;
 pub use self::multi_factor_status::MultiFactorStatus;
 pub mod mutual_response;
@@ -364,6 +362,8 @@ pub mod options_message_search;
 pub use self::options_message_search::OptionsMessageSearch;
 pub mod options_query_stale;
 pub use self::options_query_stale::OptionsQueryStale;
+pub mod model_override;
+pub use self::model_override::Override;
 pub mod override_field;
 pub use self::override_field::OverrideField;
 pub mod owned_bots_response;
@@ -524,10 +524,3 @@ pub mod voice_feature;
 pub use self::voice_feature::VoiceFeature;
 pub mod web_push_subscription;
 pub use self::web_push_subscription::WebPushSubscription;
-
-fn box_option<T>(value: Option<T>) -> Option<Box<T>> {
-    match value {
-        Some(value) => Some(Box::new(value)),
-        None => None
-    }
-}

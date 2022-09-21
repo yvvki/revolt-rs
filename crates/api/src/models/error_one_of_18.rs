@@ -14,26 +14,26 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ErrorOneOf18 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
 }
 
 impl ErrorOneOf18 {
-    pub fn new(_type: Type) -> ErrorOneOf18 {
+    pub fn new(r#type: RHashType) -> ErrorOneOf18 {
         ErrorOneOf18 {
-            _type,
+            r#type,
         }
     }
 }
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "PayloadTooLarge")]
     PayloadTooLarge,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::PayloadTooLarge
     }
 }

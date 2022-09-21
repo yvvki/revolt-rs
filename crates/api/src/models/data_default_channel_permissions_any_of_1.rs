@@ -15,13 +15,13 @@
 pub struct DataDefaultChannelPermissionsAnyOf1 {
     /// Allow / deny values to set for members in this `TextChannel` or `VoiceChannel`
     #[serde(rename = "permissions")]
-    pub permissions: Option<Box<crate::models::ModelOverride>>,
+    pub permissions: Box<crate::models::Override>,
 }
 
 impl DataDefaultChannelPermissionsAnyOf1 {
-    pub fn new(permissions: Option<crate::models::ModelOverride>) -> DataDefaultChannelPermissionsAnyOf1 {
+    pub fn new(permissions: crate::models::Override) -> DataDefaultChannelPermissionsAnyOf1 {
         DataDefaultChannelPermissionsAnyOf1 {
-            permissions: super::box_option(permissions),
+            permissions: Box::new(permissions),
         }
     }
 }

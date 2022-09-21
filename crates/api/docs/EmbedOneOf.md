@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **url** | Option<**String**> | Direct URL to web page | [optional]
 **original_url** | Option<**String**> | Original direct URL | [optional]
 **special** | Option<[**crate::models::Special**](Special.md)> | Remote content | [optional]

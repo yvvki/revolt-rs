@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct Special {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "id")]
     pub id: String,
     #[serde(rename = "timestamp", skip_serializing_if = "Option::is_none")]
@@ -26,9 +26,9 @@ pub struct Special {
 
 impl Special {
     /// Information about special remote content
-    pub fn new(_type: Type, id: String, content_type: crate::models::BandcampType) -> Special {
+    pub fn new(r#type: RHashType, id: String, content_type: crate::models::BandcampType) -> Special {
         Special {
-            _type,
+            r#type,
             id,
             timestamp: None,
             content_type,
@@ -38,13 +38,13 @@ impl Special {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Bandcamp")]
     Bandcamp,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Bandcamp
     }
 }

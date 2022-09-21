@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct SpecialOneOf5 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "content_type")]
     pub content_type: String,
     #[serde(rename = "id")]
@@ -24,9 +24,9 @@ pub struct SpecialOneOf5 {
 
 impl SpecialOneOf5 {
     /// Spotify track
-    pub fn new(_type: Type, content_type: String, id: String) -> SpecialOneOf5 {
+    pub fn new(r#type: RHashType, content_type: String, id: String) -> SpecialOneOf5 {
         SpecialOneOf5 {
-            _type,
+            r#type,
             content_type,
             id,
         }
@@ -35,13 +35,13 @@ impl SpecialOneOf5 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Spotify")]
     Spotify,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Spotify
     }
 }

@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct EmbedOneOf {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     /// Direct URL to web page
     #[serde(rename = "url", skip_serializing_if = "Option::is_none")]
     pub url: Option<String>,
@@ -50,9 +50,9 @@ pub struct EmbedOneOf {
 
 impl EmbedOneOf {
     /// Website metadata
-    pub fn new(_type: Type) -> EmbedOneOf {
+    pub fn new(r#type: RHashType) -> EmbedOneOf {
         EmbedOneOf {
-            _type,
+            r#type,
             url: None,
             original_url: None,
             special: None,
@@ -69,13 +69,13 @@ impl EmbedOneOf {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Website")]
     Website,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Website
     }
 }

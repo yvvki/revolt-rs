@@ -15,27 +15,27 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct MetadataOneOf1 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
 }
 
 impl MetadataOneOf1 {
     /// File contains textual data and should be displayed as such
-    pub fn new(_type: Type) -> MetadataOneOf1 {
+    pub fn new(r#type: RHashType) -> MetadataOneOf1 {
         MetadataOneOf1 {
-            _type,
+            r#type,
         }
     }
 }
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Text")]
     Text,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Text
     }
 }

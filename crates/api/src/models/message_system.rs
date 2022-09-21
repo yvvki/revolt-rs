@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct MessageSystem {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "content")]
     pub content: String,
     #[serde(rename = "id")]
@@ -32,9 +32,9 @@ pub struct MessageSystem {
 
 impl MessageSystem {
     /// System message
-    pub fn new(_type: Type, content: String, id: String, by: String, name: String, from: String, to: String) -> MessageSystem {
+    pub fn new(r#type: RHashType, content: String, id: String, by: String, name: String, from: String, to: String) -> MessageSystem {
         MessageSystem {
-            _type,
+            r#type,
             content,
             id,
             by,
@@ -47,13 +47,13 @@ impl MessageSystem {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "channel_ownership_changed")]
     ChannelOwnershipChanged,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::ChannelOwnershipChanged
     }
 }

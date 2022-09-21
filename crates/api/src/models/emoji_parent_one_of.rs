@@ -14,15 +14,15 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct EmojiParentOneOf {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "id")]
     pub id: String,
 }
 
 impl EmojiParentOneOf {
-    pub fn new(_type: Type, id: String) -> EmojiParentOneOf {
+    pub fn new(r#type: RHashType, id: String) -> EmojiParentOneOf {
         EmojiParentOneOf {
-            _type,
+            r#type,
             id,
         }
     }
@@ -30,13 +30,13 @@ impl EmojiParentOneOf {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Server")]
     Server,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Server
     }
 }

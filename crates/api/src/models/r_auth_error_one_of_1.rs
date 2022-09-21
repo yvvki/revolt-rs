@@ -14,26 +14,26 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct RAuthErrorOneOf1 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
 }
 
 impl RAuthErrorOneOf1 {
-    pub fn new(_type: Type) -> RAuthErrorOneOf1 {
+    pub fn new(r#type: RHashType) -> RAuthErrorOneOf1 {
         RAuthErrorOneOf1 {
-            _type,
+            r#type,
         }
     }
 }
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "OperationFailed")]
     OperationFailed,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::OperationFailed
     }
 }

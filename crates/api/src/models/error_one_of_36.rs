@@ -14,7 +14,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ErrorOneOf36 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "operation")]
     pub operation: String,
     #[serde(rename = "with")]
@@ -22,9 +22,9 @@ pub struct ErrorOneOf36 {
 }
 
 impl ErrorOneOf36 {
-    pub fn new(_type: Type, operation: String, with: String) -> ErrorOneOf36 {
+    pub fn new(r#type: RHashType, operation: String, with: String) -> ErrorOneOf36 {
         ErrorOneOf36 {
-            _type,
+            r#type,
             operation,
             with,
         }
@@ -33,13 +33,13 @@ impl ErrorOneOf36 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "DatabaseError")]
     DatabaseError,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::DatabaseError
     }
 }

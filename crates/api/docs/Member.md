@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **_id** | [**crate::models::MemberId**](Member__id.md) |  | 
-**joined_at** | Option<**String**> | Time at which this user joined the server | 
+**joined_at** | **String** | Time at which this user joined the server | 
 **nickname** | Option<**String**> | Member's nickname | [optional]
 **avatar** | Option<[**crate::models::UserAvatar**](User_avatar.md)> |  | [optional]
 **roles** | Option<**Vec<String>**> | Member's roles | [optional]

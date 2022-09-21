@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **_id** | **String** | Invite code | 
 **server** | **String** | Id of the server this invite points to | 
 **creator** | **String** | Id of user who created this invite | 

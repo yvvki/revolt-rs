@@ -25,17 +25,17 @@ pub struct Image {
     pub height: i32,
     /// Positioning and size
     #[serde(rename = "size")]
-    pub size: Option<Box<crate::models::ImageSize>>,
+    pub size: Box<crate::models::ImageSize>,
 }
 
 impl Image {
     /// Image
-    pub fn new(url: String, width: i32, height: i32, size: Option<crate::models::ImageSize>) -> Image {
+    pub fn new(url: String, width: i32, height: i32, size: crate::models::ImageSize) -> Image {
         Image {
             url,
             width,
             height,
-            size: super::box_option(size),
+            size: Box::new(size),
         }
     }
 }

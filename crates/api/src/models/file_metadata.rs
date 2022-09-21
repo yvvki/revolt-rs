@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct FileMetadata {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "width")]
     pub width: i32,
     #[serde(rename = "height")]
@@ -24,9 +24,9 @@ pub struct FileMetadata {
 
 impl FileMetadata {
     /// Parsed metadata of this file
-    pub fn new(_type: Type, width: i32, height: i32) -> FileMetadata {
+    pub fn new(r#type: RHashType, width: i32, height: i32) -> FileMetadata {
         FileMetadata {
-            _type,
+            r#type,
             width,
             height,
         }
@@ -35,13 +35,13 @@ impl FileMetadata {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Audio")]
     Audio,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Audio
     }
 }

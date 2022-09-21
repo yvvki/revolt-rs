@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **icon_url** | Option<**String**> | URL to icon | [optional]
 **url** | Option<**String**> | URL for title | [optional]
 **title** | Option<**String**> | Title of text embed | [optional]

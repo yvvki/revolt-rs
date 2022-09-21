@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct EmbedOneOf1 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     /// URL to the original image
     #[serde(rename = "url")]
     pub url: String,
@@ -27,31 +27,31 @@ pub struct EmbedOneOf1 {
     pub height: i32,
     /// Positioning and size
     #[serde(rename = "size")]
-    pub size: Option<Box<crate::models::ImageSize>>,
+    pub size: Box<crate::models::ImageSize>,
 }
 
 impl EmbedOneOf1 {
     /// Image
-    pub fn new(_type: Type, url: String, width: i32, height: i32, size: Option<crate::models::ImageSize>) -> EmbedOneOf1 {
+    pub fn new(r#type: RHashType, url: String, width: i32, height: i32, size: crate::models::ImageSize) -> EmbedOneOf1 {
         EmbedOneOf1 {
-            _type,
+            r#type,
             url,
             width,
             height,
-            size: super::box_option(size),
+            size: Box::new(size),
         }
     }
 }
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Image")]
     Image,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Image
     }
 }

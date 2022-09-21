@@ -18,7 +18,7 @@ pub struct Member {
     pub _id: Box<crate::models::MemberId>,
     /// Time at which this user joined the server
     #[serde(rename = "joined_at")]
-    pub joined_at: Option<Box<String>>,
+    pub joined_at: Box<String>,
     /// Member's nickname
     #[serde(rename = "nickname", skip_serializing_if = "Option::is_none")]
     pub nickname: Option<String>,
@@ -34,10 +34,10 @@ pub struct Member {
 
 impl Member {
     /// Representation of a member of a server on Revolt
-    pub fn new(_id: crate::models::MemberId, joined_at: Option<String>) -> Member {
+    pub fn new(_id: crate::models::MemberId, joined_at: String) -> Member {
         Member {
             _id: Box::new(_id),
-            joined_at: super::box_option(joined_at),
+            joined_at: Box::new(joined_at),
             nickname: None,
             avatar: None,
             roles: None,

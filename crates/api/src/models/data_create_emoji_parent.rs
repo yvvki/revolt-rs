@@ -15,16 +15,16 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct DataCreateEmojiParent {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "id")]
     pub id: String,
 }
 
 impl DataCreateEmojiParent {
     /// Parent information
-    pub fn new(_type: Type, id: String) -> DataCreateEmojiParent {
+    pub fn new(r#type: RHashType, id: String) -> DataCreateEmojiParent {
         DataCreateEmojiParent {
-            _type,
+            r#type,
             id,
         }
     }
@@ -32,13 +32,13 @@ impl DataCreateEmojiParent {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Detached")]
     Detached,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Detached
     }
 }

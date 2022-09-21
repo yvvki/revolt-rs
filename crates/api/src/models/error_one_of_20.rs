@@ -14,15 +14,15 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ErrorOneOf20 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "max")]
     pub max: i32,
 }
 
 impl ErrorOneOf20 {
-    pub fn new(_type: Type, max: i32) -> ErrorOneOf20 {
+    pub fn new(r#type: RHashType, max: i32) -> ErrorOneOf20 {
         ErrorOneOf20 {
-            _type,
+            r#type,
             max,
         }
     }
@@ -30,13 +30,13 @@ impl ErrorOneOf20 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "GroupTooLarge")]
     GroupTooLarge,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::GroupTooLarge
     }
 }

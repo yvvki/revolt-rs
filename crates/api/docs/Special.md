@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **id** | **String** |  | 
 **timestamp** | Option<**String**> |  | [optional]
 **content_type** | [**crate::models::BandcampType**](BandcampType.md) |  | 

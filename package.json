@@ -2,6 +2,7 @@
   "name": "revolt-rs",
   "version": "0.1.0",
   "description": "Revolt for Rust",
+  "private": "true",
   "type": "module",
   "main": "index.js",
   "scripts": {

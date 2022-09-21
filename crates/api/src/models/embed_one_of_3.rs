@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct EmbedOneOf3 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     /// URL to icon
     #[serde(rename = "icon_url", skip_serializing_if = "Option::is_none")]
     pub icon_url: Option<String>,
@@ -38,9 +38,9 @@ pub struct EmbedOneOf3 {
 
 impl EmbedOneOf3 {
     /// Text Embed
-    pub fn new(_type: Type) -> EmbedOneOf3 {
+    pub fn new(r#type: RHashType) -> EmbedOneOf3 {
         EmbedOneOf3 {
-            _type,
+            r#type,
             icon_url: None,
             url: None,
             title: None,
@@ -53,13 +53,13 @@ impl EmbedOneOf3 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Text")]
     Text,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Text
     }
 }

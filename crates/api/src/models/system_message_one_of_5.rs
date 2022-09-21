@@ -14,15 +14,15 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct SystemMessageOneOf5 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "id")]
     pub id: String,
 }
 
 impl SystemMessageOneOf5 {
-    pub fn new(_type: Type, id: String) -> SystemMessageOneOf5 {
+    pub fn new(r#type: RHashType, id: String) -> SystemMessageOneOf5 {
         SystemMessageOneOf5 {
-            _type,
+            r#type,
             id,
         }
     }
@@ -30,13 +30,13 @@ impl SystemMessageOneOf5 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "user_kicked")]
     UserKicked,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::UserKicked
     }
 }

@@ -30,18 +30,18 @@ pub struct DataLogin {
     pub mfa_ticket: String,
     /// Valid MFA response  This will take precedence over the `password` field where applicable
     #[serde(rename = "mfa_response")]
-    pub mfa_response: Option<Box<crate::models::MfaResponse>>,
+    pub mfa_response: Box<crate::models::MfaResponse>,
 }
 
 impl DataLogin {
-    pub fn new(email: String, password: String, mfa_ticket: String, mfa_response: Option<crate::models::MfaResponse>) -> DataLogin {
+    pub fn new(email: String, password: String, mfa_ticket: String, mfa_response: crate::models::MfaResponse) -> DataLogin {
         DataLogin {
             email,
             password,
             captcha: None,
             friendly_name: None,
             mfa_ticket,
-            mfa_response: super::box_option(mfa_response),
+            mfa_response: Box::new(mfa_response),
         }
     }
 }

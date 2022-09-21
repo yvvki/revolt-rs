@@ -14,15 +14,15 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct SystemMessageOneOf9 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "by")]
     pub by: String,
 }
 
 impl SystemMessageOneOf9 {
-    pub fn new(_type: Type, by: String) -> SystemMessageOneOf9 {
+    pub fn new(r#type: RHashType, by: String) -> SystemMessageOneOf9 {
         SystemMessageOneOf9 {
-            _type,
+            r#type,
             by,
         }
     }
@@ -30,13 +30,13 @@ impl SystemMessageOneOf9 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "channel_icon_changed")]
     ChannelIconChanged,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::ChannelIconChanged
     }
 }

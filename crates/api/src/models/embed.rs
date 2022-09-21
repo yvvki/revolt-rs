@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct Embed {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     /// URL for title
     #[serde(rename = "url")]
     pub url: Option<String>,
@@ -54,7 +54,7 @@ pub struct Embed {
     pub height: i32,
     /// Positioning and size
     #[serde(rename = "size")]
-    pub size: Option<Box<crate::models::ImageSize>>,
+    pub size: Box<crate::models::ImageSize>,
     /// ID of uploaded autumn file
     #[serde(rename = "media", skip_serializing_if = "Option::is_none")]
     pub media: Option<Box<crate::models::File>>,
@@ -62,9 +62,9 @@ pub struct Embed {
 
 impl Embed {
     /// Embed
-    pub fn new(_type: Type, url: Option<String>, width: i32, height: i32, size: Option<crate::models::ImageSize>) -> Embed {
+    pub fn new(r#type: RHashType, url: Option<String>, width: i32, height: i32, size: crate::models::ImageSize) -> Embed {
         Embed {
-            _type,
+            r#type,
             url,
             original_url: None,
             special: None,
@@ -77,7 +77,7 @@ impl Embed {
             colour: None,
             width,
             height,
-            size: super::box_option(size),
+            size: Box::new(size),
             media: None,
         }
     }
@@ -85,13 +85,13 @@ impl Embed {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "None")]
     None,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::None
     }
 }

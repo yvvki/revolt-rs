@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_type** | **String** |  | 
+**r#type** | **String** |  | 
 **code** | **String** | Invite code | 
 **server_id** | **String** | Id of the server | 
 **server_name** | **String** | Name of the server | 

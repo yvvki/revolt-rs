@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## channel_delete_req
 
-> channel_delete_req(target)
+> channel_delete_req(target, leave_silently)
 Close Channel
 
 Deletes a server channel, leaves a group or closes a group.
@@ -23,6 +23,7 @@ Deletes a server channel, leaves a group or closes a group.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **target** | **String** |  | [required] |
+**leave_silently** | Option<**bool**> | Whether to not send a leave message |  |
 
 ### Return type
 

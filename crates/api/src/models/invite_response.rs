@@ -14,7 +14,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct InviteResponse {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     /// Invite code
     #[serde(rename = "code")]
     pub code: String,
@@ -51,9 +51,9 @@ pub struct InviteResponse {
 }
 
 impl InviteResponse {
-    pub fn new(_type: Type, code: String, server_id: String, server_name: String, channel_id: String, channel_name: String, user_name: String, member_count: i64) -> InviteResponse {
+    pub fn new(r#type: RHashType, code: String, server_id: String, server_name: String, channel_id: String, channel_name: String, user_name: String, member_count: i64) -> InviteResponse {
         InviteResponse {
-            _type,
+            r#type,
             code,
             server_id,
             server_name,
@@ -71,13 +71,13 @@ impl InviteResponse {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Group")]
     Group,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Group
     }
 }

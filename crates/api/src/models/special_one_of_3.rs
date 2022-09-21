@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct SpecialOneOf3 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "content_type")]
     pub content_type: crate::models::LightspeedType,
     #[serde(rename = "id")]
@@ -24,9 +24,9 @@ pub struct SpecialOneOf3 {
 
 impl SpecialOneOf3 {
     /// Lightspeed.tv stream
-    pub fn new(_type: Type, content_type: crate::models::LightspeedType, id: String) -> SpecialOneOf3 {
+    pub fn new(r#type: RHashType, content_type: crate::models::LightspeedType, id: String) -> SpecialOneOf3 {
         SpecialOneOf3 {
-            _type,
+            r#type,
             content_type,
             id,
         }
@@ -35,13 +35,13 @@ impl SpecialOneOf3 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Lightspeed")]
     Lightspeed,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Lightspeed
     }
 }

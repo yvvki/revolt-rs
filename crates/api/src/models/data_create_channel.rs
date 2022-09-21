@@ -15,7 +15,7 @@
 pub struct DataCreateChannel {
     /// Channel type
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
-    pub _type: Option<Box<crate::models::ChannelType>>,
+    pub r#type: Option<Box<crate::models::ChannelType>>,
     /// Channel name
     #[serde(rename = "name")]
     pub name: String,
@@ -30,7 +30,7 @@ pub struct DataCreateChannel {
 impl DataCreateChannel {
     pub fn new(name: String) -> DataCreateChannel {
         DataCreateChannel {
-            _type: None,
+            r#type: None,
             name,
             description: None,
             nsfw: None,

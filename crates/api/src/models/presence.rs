@@ -17,6 +17,8 @@ pub enum Presence {
     Online,
     #[serde(rename = "Idle")]
     Idle,
+    #[serde(rename = "Focus")]
+    Focus,
     #[serde(rename = "Busy")]
     Busy,
     #[serde(rename = "Invisible")]
@@ -29,6 +31,7 @@ impl ToString for Presence {
         match self {
             Self::Online => String::from("Online"),
             Self::Idle => String::from("Idle"),
+            Self::Focus => String::from("Focus"),
             Self::Busy => String::from("Busy"),
             Self::Invisible => String::from("Invisible"),
         }

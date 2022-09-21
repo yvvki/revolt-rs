@@ -106,7 +106,7 @@ Name | Type | Description  | Required | Notes
 
 ## server_delete_req
 
-> server_delete_req(target)
+> server_delete_req(target, leave_silently)
 Delete / Leave Server
 
 Deletes a server if owner otherwise leaves.
@@ -117,6 +117,7 @@ Deletes a server if owner otherwise leaves.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **target** | **String** |  | [required] |
+**leave_silently** | Option<**bool**> | Whether to not send a leave message |  |
 
 ### Return type
 

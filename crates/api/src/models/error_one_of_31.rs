@@ -14,15 +14,15 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ErrorOneOf31 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "permission")]
     pub permission: crate::models::Permission,
 }
 
 impl ErrorOneOf31 {
-    pub fn new(_type: Type, permission: crate::models::Permission) -> ErrorOneOf31 {
+    pub fn new(r#type: RHashType, permission: crate::models::Permission) -> ErrorOneOf31 {
         ErrorOneOf31 {
-            _type,
+            r#type,
             permission,
         }
     }
@@ -30,13 +30,13 @@ impl ErrorOneOf31 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "MissingPermission")]
     MissingPermission,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::MissingPermission
     }
 }

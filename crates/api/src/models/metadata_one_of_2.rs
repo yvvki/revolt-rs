@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct MetadataOneOf2 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "width")]
     pub width: i32,
     #[serde(rename = "height")]
@@ -24,9 +24,9 @@ pub struct MetadataOneOf2 {
 
 impl MetadataOneOf2 {
     /// File is an image with specific dimensions
-    pub fn new(_type: Type, width: i32, height: i32) -> MetadataOneOf2 {
+    pub fn new(r#type: RHashType, width: i32, height: i32) -> MetadataOneOf2 {
         MetadataOneOf2 {
-            _type,
+            r#type,
             width,
             height,
         }
@@ -35,13 +35,13 @@ impl MetadataOneOf2 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "Image")]
     Image,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::Image
     }
 }

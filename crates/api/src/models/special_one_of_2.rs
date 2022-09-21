@@ -15,7 +15,7 @@
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct SpecialOneOf2 {
     #[serde(rename = "type")]
-    pub _type: Type,
+    pub r#type: RHashType,
     #[serde(rename = "id")]
     pub id: String,
     #[serde(rename = "timestamp", skip_serializing_if = "Option::is_none")]
@@ -24,9 +24,9 @@ pub struct SpecialOneOf2 {
 
 impl SpecialOneOf2 {
     /// YouTube video
-    pub fn new(_type: Type, id: String) -> SpecialOneOf2 {
+    pub fn new(r#type: RHashType, id: String) -> SpecialOneOf2 {
         SpecialOneOf2 {
-            _type,
+            r#type,
             id,
             timestamp: None,
         }
@@ -35,13 +35,13 @@ impl SpecialOneOf2 {
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum RHashType {
     #[serde(rename = "YouTube")]
     YouTube,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for RHashType {
+    fn default() -> RHashType {
         Self::YouTube
     }
 }
