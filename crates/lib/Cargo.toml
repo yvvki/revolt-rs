@@ -10,7 +10,7 @@ repository.workspace = true
 
 [dependencies.revolt_api]
 path = "../api"
-version = "0.5"
+version = "0.5.5-rev.1"
 
 [dependencies]
 tokio = { workspace = true }
