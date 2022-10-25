@@ -19,9 +19,6 @@ pub struct DataLoginAnyOf {
     /// Password
     #[serde(rename = "password")]
     pub password: String,
-    /// Captcha verification code
-    #[serde(rename = "captcha", skip_serializing_if = "Option::is_none")]
-    pub captcha: Option<String>,
     /// Friendly name used for the session
     #[serde(rename = "friendly_name", skip_serializing_if = "Option::is_none")]
     pub friendly_name: Option<String>,
@@ -32,7 +29,6 @@ impl DataLoginAnyOf {
         DataLoginAnyOf {
             email,
             password,
-            captcha: None,
             friendly_name: None,
         }
     }

@@ -394,6 +394,8 @@ pub mod r_auth_error_one_of_14;
 pub use self::r_auth_error_one_of_14::RAuthErrorOneOf14;
 pub mod r_auth_error_one_of_15;
 pub use self::r_auth_error_one_of_15::RAuthErrorOneOf15;
+pub mod r_auth_error_one_of_16;
+pub use self::r_auth_error_one_of_16::RAuthErrorOneOf16;
 pub mod r_auth_error_one_of_2;
 pub use self::r_auth_error_one_of_2::RAuthErrorOneOf2;
 pub mod r_auth_error_one_of_3;

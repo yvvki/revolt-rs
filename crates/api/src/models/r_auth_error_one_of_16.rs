@@ -12,14 +12,14 @@
 
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
-pub struct RAuthErrorOneOf15 {
+pub struct RAuthErrorOneOf16 {
     #[serde(rename = "type")]
     pub r#type: RHashType,
 }
 
-impl RAuthErrorOneOf15 {
-    pub fn new(r#type: RHashType) -> RAuthErrorOneOf15 {
-        RAuthErrorOneOf15 {
+impl RAuthErrorOneOf16 {
+    pub fn new(r#type: RHashType) -> RAuthErrorOneOf16 {
+        RAuthErrorOneOf16 {
             r#type,
         }
     }
@@ -28,13 +28,13 @@ impl RAuthErrorOneOf15 {
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
 pub enum RHashType {
-    #[serde(rename = "TotpAlreadyEnabled")]
-    TotpAlreadyEnabled,
+    #[serde(rename = "DisallowedMFAMethod")]
+    DisallowedMfaMethod,
 }
 
 impl Default for RHashType {
     fn default() -> RHashType {
-        Self::TotpAlreadyEnabled
+        Self::DisallowedMfaMethod
     }
 }
 

@@ -1,7 +1,7 @@
 
 [package]
 name = "revolt_api"
-version = "0.5.5-rev.1"
+version = "0.5.5-rev.2"
 authors = ["OpenAPI Generator team and contributors", "Yuuki Rika"]
 edition = "2018"
 license.workspace = true

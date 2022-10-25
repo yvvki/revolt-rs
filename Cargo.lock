@@ -700,7 +700,7 @@ dependencies = [
 
 [[package]]
 name = "revolt_api"
-version = "0.5.5-rev.1"
+version = "0.5.5-rev.2"
 dependencies = [
  "reqwest",
  "serde",

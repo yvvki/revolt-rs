@@ -19,9 +19,6 @@ pub struct DataLogin {
     /// Password
     #[serde(rename = "password")]
     pub password: String,
-    /// Captcha verification code
-    #[serde(rename = "captcha", skip_serializing_if = "Option::is_none")]
-    pub captcha: Option<String>,
     /// Friendly name used for the session
     #[serde(rename = "friendly_name", skip_serializing_if = "Option::is_none")]
     pub friendly_name: Option<String>,
@@ -38,7 +35,6 @@ impl DataLogin {
         DataLogin {
             email,
             password,
-            captcha: None,
             friendly_name: None,
             mfa_ticket,
             mfa_response: Box::new(mfa_response),

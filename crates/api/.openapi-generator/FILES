@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 Cargo.toml
 README.md
@@ -215,6 +214,7 @@ docs/RAuthErrorOneOf12.md
 docs/RAuthErrorOneOf13.md
 docs/RAuthErrorOneOf14.md
 docs/RAuthErrorOneOf15.md
+docs/RAuthErrorOneOf16.md
 docs/RAuthErrorOneOf2.md
 docs/RAuthErrorOneOf3.md
 docs/RAuthErrorOneOf4.md
@@ -517,6 +517,7 @@ src/models/r_auth_error_one_of_12.rs
 src/models/r_auth_error_one_of_13.rs
 src/models/r_auth_error_one_of_14.rs
 src/models/r_auth_error_one_of_15.rs
+src/models/r_auth_error_one_of_16.rs
 src/models/r_auth_error_one_of_2.rs
 src/models/r_auth_error_one_of_3.rs
 src/models/r_auth_error_one_of_4.rs

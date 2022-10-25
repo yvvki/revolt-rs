@@ -28,13 +28,13 @@ impl RAuthErrorOneOf14 {
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
 pub enum RHashType {
-    #[serde(rename = "TotpAlreadyEnabled")]
-    TotpAlreadyEnabled,
+    #[serde(rename = "LockedOut")]
+    LockedOut,
 }
 
 impl Default for RHashType {
     fn default() -> RHashType {
-        Self::TotpAlreadyEnabled
+        Self::LockedOut
     }
 }
 

@@ -331,6 +331,7 @@ Class | Method | HTTP request | Description
  - [RAuthErrorOneOf13](docs/RAuthErrorOneOf13.md)
  - [RAuthErrorOneOf14](docs/RAuthErrorOneOf14.md)
  - [RAuthErrorOneOf15](docs/RAuthErrorOneOf15.md)
+ - [RAuthErrorOneOf16](docs/RAuthErrorOneOf16.md)
  - [RAuthErrorOneOf2](docs/RAuthErrorOneOf2.md)
  - [RAuthErrorOneOf3](docs/RAuthErrorOneOf3.md)
  - [RAuthErrorOneOf4](docs/RAuthErrorOneOf4.md)

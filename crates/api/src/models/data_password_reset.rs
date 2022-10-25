@@ -19,6 +19,9 @@ pub struct DataPasswordReset {
     /// New password
     #[serde(rename = "password")]
     pub password: String,
+    /// Whether to logout all sessions
+    #[serde(rename = "remove_sessions", skip_serializing_if = "Option::is_none")]
+    pub remove_sessions: Option<bool>,
 }
 
 impl DataPasswordReset {
@@ -26,6 +29,7 @@ impl DataPasswordReset {
         DataPasswordReset {
             token,
             password,
+            remove_sessions: None,
         }
     }
 }

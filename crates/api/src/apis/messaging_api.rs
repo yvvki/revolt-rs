@@ -11,7 +11,7 @@
 
 use reqwest;
 
-use crate::apis::ResponseContent;
+use crate::{apis::ResponseContent, models::MessageSort};
 use super::{Error, configuration};
 
 
@@ -271,7 +271,7 @@ pub async fn message_fetch_req(configuration: &configuration::Configuration, tar
 }
 
 /// Fetch multiple messages.
-pub async fn message_query_req(configuration: &configuration::Configuration, target: &str, limit: Option<i64>, before: Option<&str>, after: Option<&str>, sort: Option<crate::models::MessageSort>, nearby: Option<&str>, include_users: Option<bool>) -> Result<crate::models::BulkMessageResponse, Error<MessageQueryReqError>> {
+pub async fn message_query_req(configuration: &configuration::Configuration, target: &str, limit: Option<i64>, before: Option<&str>, after: Option<&str>, sort: Option<MessageSort>, nearby: Option<&str>, include_users: Option<bool>) -> Result<crate::models::BulkMessageResponse, Error<MessageQueryReqError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
