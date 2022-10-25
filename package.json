@@ -25,6 +25,6 @@
   "homepage": "https://github.com/yvvki/revolt-rs#readme",
   "devDependencies": {
     "@ltd/j-toml": "^1.35.2",
-    "@openapitools/openapi-generator-cli": "^2.5.1"
+    "@openapitools/openapi-generator-cli": "^2.5.2"
   }
 }
