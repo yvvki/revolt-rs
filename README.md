@@ -1,21 +1,18 @@
 # Revolute
 
-Rust typings for the Revolt API.
-
-[https://revolt.chat](https://revolt.chat)
+Rust typings for the [Revolt](https://revolt.chat) API.
 
 [![Rust](https://github.com/yvvki/revolt-rs/actions/workflows/rust.yml/badge.svg)](https://github.com/yvvki/revolt-rs/actions/workflows/rust.yml)
 
 ---
 
-## Prerequisities
+## Generating API
 
-* Java 8 runtime at a minimum
+We use [`openapi-generator-cli`](https://openapi-generator.tech/) to generate
+our Rust API libraries automatically from
+<https://api.revolt.chat/openapi.json>.
 
-## Generating
-
-Run this to generate Rust library from Revolt OpenAPI specs at
-<https://api.revolt.chat/openapi.json>
+To generate:
 
 ```sh
 npm run generate
