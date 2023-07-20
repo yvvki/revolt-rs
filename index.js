@@ -13,9 +13,7 @@ if (!apiCargo['package']['authors'].includes(me)) {
   apiCargo['package']['authors'].push(me);
 }
 
-// Inherit the workspace package table.
-apiCargo['package']['license'] = { 'workspace': true };
-apiCargo['package']['description'] = { 'workspace': true };
+// Inherit the workspace repository.
 apiCargo['package']['repository'] = { 'workspace': true };
 
 // Serialize
