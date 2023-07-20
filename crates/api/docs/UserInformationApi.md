@@ -5,9 +5,10 @@ All URIs are relative to *https://api.revolt.chat*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**change_username_req**](UserInformationApi.md#change_username_req) | **PATCH** /users/@me/username | Change Username
-[**edit_user_req**](UserInformationApi.md#edit_user_req) | **PATCH** /users/@me | Edit User
+[**edit_user_req**](UserInformationApi.md#edit_user_req) | **PATCH** /users/{target} | Edit User
 [**fetch_profile_req**](UserInformationApi.md#fetch_profile_req) | **GET** /users/{target}/profile | Fetch User Profile
 [**fetch_self_req**](UserInformationApi.md#fetch_self_req) | **GET** /users/@me | Fetch Self
+[**fetch_user_flags_fetch_user_flags**](UserInformationApi.md#fetch_user_flags_fetch_user_flags) | **GET** /users/{target}/flags | Fetch User Flags
 [**fetch_user_req**](UserInformationApi.md#fetch_user_req) | **GET** /users/{target} | Fetch User
 [**get_default_avatar_req**](UserInformationApi.md#get_default_avatar_req) | **GET** /users/{target}/default_avatar | Fetch Default Avatar
 
@@ -45,7 +46,7 @@ Name | Type | Description  | Required | Notes
 
 ## edit_user_req
 
-> crate::models::User edit_user_req(data_edit_user)
+> crate::models::User edit_user_req(target, data_edit_user)
 Edit User
 
 Edit currently authenticated user.
@@ -55,6 +56,7 @@ Edit currently authenticated user.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
+**target** | **String** |  | [required] |
 **data_edit_user** | [**DataEditUser**](DataEditUser.md) |  | [required] |
 
 ### Return type
@@ -121,6 +123,36 @@ This endpoint does not need any parameter.
 ### Authorization
 
 [Session Token](../README.md#Session Token)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## fetch_user_flags_fetch_user_flags
+
+> crate::models::FlagResponse fetch_user_flags_fetch_user_flags(target)
+Fetch User Flags
+
+Retrieve a user's flags.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**target** | **String** |  | [required] |
+
+### Return type
+
+[**crate::models::FlagResponse**](FlagResponse.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 

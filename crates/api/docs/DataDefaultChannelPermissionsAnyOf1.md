@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**permissions** | [**crate::models::Override**](Override.md) | Allow / deny values to set for members in this `TextChannel` or `VoiceChannel` | 
+**permissions** | [**crate::models::DataDefaultChannelPermissionsAnyOf1Permissions**](DataDefaultChannelPermissions_anyOf_1_permissions.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

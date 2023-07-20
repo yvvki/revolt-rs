@@ -6,10 +6,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **result** | **String** |  | 
 **_id** | **String** | Unique Id | 
-**user_id** | **String** | User Id | 
+**user_id** | **String** |  | 
 **token** | **String** | Session token | 
 **name** | **String** | Display name | 
-**subscription** | Option<[**crate::models::WebPushSubscription**](WebPushSubscription.md)> | Web Push subscription | [optional]
+**subscription** | Option<[**crate::models::ResponseLoginOneOfSubscription**](ResponseLogin_oneOf_subscription.md)> |  | [optional]
 **ticket** | **String** |  | 
 **allowed_methods** | [**Vec<crate::models::MfaMethod>**](MFAMethod.md) |  | 
 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **banner** | Option<**String**> | Attachment Id for banner | [optional]
 **categories** | Option<[**Vec<crate::models::Category>**](Category.md)> | Category structure for server | [optional]
 **system_messages** | Option<[**crate::models::DataEditServerSystemMessages**](DataEditServer_system_messages.md)> |  | [optional]
+**flags** | Option<**i32**> | Bitfield of server flags | [optional]
 **discoverable** | Option<**bool**> | Whether this server is public and should show up on [Revolt Discover](https://rvlt.gg) | [optional]
 **analytics** | Option<**bool**> | Whether analytics should be collected for this server  Must be enabled in order to show up on [Revolt Discover](https://rvlt.gg). | [optional]
 **remove** | Option<[**Vec<crate::models::FieldsServer>**](FieldsServer.md)> | Fields to remove from server object | [optional]

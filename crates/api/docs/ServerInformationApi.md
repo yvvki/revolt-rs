@@ -168,7 +168,7 @@ Name | Type | Description  | Required | Notes
 
 ## server_fetch_req
 
-> crate::models::Server server_fetch_req(target)
+> crate::models::FetchServerResponse server_fetch_req(target, include_channels)
 Fetch Server
 
 Fetch a server by its id.
@@ -179,10 +179,11 @@ Fetch a server by its id.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **target** | **String** |  | [required] |
+**include_channels** | Option<**bool**> | Whether to include channels |  |
 
 ### Return type
 
-[**crate::models::Server**](Server.md)
+[**crate::models::FetchServerResponse**](FetchServerResponse.md)
 
 ### Authorization
 

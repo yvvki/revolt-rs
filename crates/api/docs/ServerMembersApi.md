@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**ban_remove_req**](ServerMembersApi.md#ban_remove_req) | **DELETE** /servers/{server}/bans/{target} | Unban user
 [**invites_fetch_req**](ServerMembersApi.md#invites_fetch_req) | **GET** /servers/{target}/invites | Fetch Invites
 [**member_edit_req**](ServerMembersApi.md#member_edit_req) | **PATCH** /servers/{server}/members/{target} | Edit Member
+[**member_experimental_query_member_experimental_query**](ServerMembersApi.md#member_experimental_query_member_experimental_query) | **GET** /servers/{target}/members_experimental_query | Query members by name
 [**member_fetch_all_req**](ServerMembersApi.md#member_fetch_all_req) | **GET** /servers/{target}/members | Fetch Members
 [**member_fetch_req**](ServerMembersApi.md#member_fetch_req) | **GET** /servers/{target}/members/{member} | Fetch Member
 [**member_remove_req**](ServerMembersApi.md#member_remove_req) | **DELETE** /servers/{target}/members/{member} | Kick Member
@@ -165,6 +166,38 @@ Name | Type | Description  | Required | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## member_experimental_query_member_experimental_query
+
+> crate::models::MemberQueryResponse member_experimental_query_member_experimental_query(target, query, experimental_api)
+Query members by name
+
+Query members by a given name, this API is not stable and will be removed in the future.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**target** | **String** |  | [required] |
+**query** | **String** | String to search for | [required] |
+**experimental_api** | **bool** | Discourage use of this API | [required] |
+
+### Return type
+
+[**crate::models::MemberQueryResponse**](MemberQueryResponse.md)
+
+### Authorization
+
+[Session Token](../README.md#Session Token)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

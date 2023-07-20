@@ -155,7 +155,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Session Token](../README.md#Session Token), [Valid MFA Ticket](../README.md#Valid MFA Ticket)
+[Valid MFA Ticket](../README.md#Valid MFA Ticket), [Session Token](../README.md#Session Token)
 
 ### HTTP request headers
 
@@ -182,7 +182,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Session Token](../README.md#Session Token), [Valid MFA Ticket](../README.md#Valid MFA Ticket)
+[Valid MFA Ticket](../README.md#Valid MFA Ticket), [Session Token](../README.md#Session Token)
 
 ### HTTP request headers
 
@@ -311,7 +311,7 @@ No authorization required
 
 ## verify_email_verify_email
 
-> verify_email_verify_email(code)
+> crate::models::ResponseVerify verify_email_verify_email(code)
 Verify Email
 
 Verify an email address.
@@ -325,7 +325,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
- (empty response body)
+[**crate::models::ResponseVerify**](ResponseVerify.md)
 
 ### Authorization
 

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **default_permissions** | **i64** | Default set of server and channel permissions | 
 **icon** | Option<[**crate::models::ServerIcon**](Server_icon.md)> |  | [optional]
 **banner** | Option<[**crate::models::ServerBanner**](Server_banner.md)> |  | [optional]
-**flags** | Option<**i32**> | Enum of server flags | [optional]
+**flags** | Option<**i32**> | Bitfield of server flags | [optional]
 **nsfw** | Option<**bool**> | Whether this server is flagged as not safe for work | [optional]
 **analytics** | Option<**bool**> | Whether to enable analytics | [optional]
 **discoverable** | Option<**bool**> | Whether this server should be publicly discoverable | [optional]

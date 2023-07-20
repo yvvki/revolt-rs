@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **ws** | **String** | WebSocket URL | 
 **app** | **String** | URL pointing to the client serving this node | 
 **vapid** | **String** | Web Push VAPID public key | 
+**build** | [**crate::models::RevoltConfigBuild**](RevoltConfig_build.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

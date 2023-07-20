@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## permissions_set_default_req
 
-> crate::models::Server permissions_set_default_req(target, data_set_server_default_permission)
+> crate::models::Server permissions_set_default_req(target, data_permissions_value)
 Set Default Permission
 
 Sets permissions for the default role in this server.
@@ -25,7 +25,7 @@ Sets permissions for the default role in this server.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **target** | **String** |  | [required] |
-**data_set_server_default_permission** | [**DataSetServerDefaultPermission**](DataSetServerDefaultPermission.md) |  | [required] |
+**data_permissions_value** | [**DataPermissionsValue**](DataPermissionsValue.md) |  | [required] |
 
 ### Return type
 

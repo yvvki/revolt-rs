@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Session Token](../README.md#Session Token), [Valid MFA Ticket](../README.md#Valid MFA Ticket)
+[Valid MFA Ticket](../README.md#Valid MFA Ticket), [Session Token](../README.md#Session Token)
 
 ### HTTP request headers
 
@@ -116,7 +116,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Session Token](../README.md#Session Token), [Valid MFA Ticket](../README.md#Valid MFA Ticket)
+[Valid MFA Ticket](../README.md#Valid MFA Ticket), [Session Token](../README.md#Session Token)
 
 ### HTTP request headers
 
@@ -170,7 +170,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Session Token](../README.md#Session Token), [Valid MFA Ticket](../README.md#Valid MFA Ticket)
+[Valid MFA Ticket](../README.md#Valid MFA Ticket), [Session Token](../README.md#Session Token)
 
 ### HTTP request headers
 
@@ -227,7 +227,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Session Token](../README.md#Session Token), [Valid MFA Ticket](../README.md#Valid MFA Ticket)
+[Valid MFA Ticket](../README.md#Valid MFA Ticket), [Session Token](../README.md#Session Token)
 
 ### HTTP request headers
 

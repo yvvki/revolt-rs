@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **server** | **String** | Id of the server this channel belongs to | 
 **name** | **String** | Display name of the channel | 
 **description** | Option<**String**> | Channel description | [optional]
-**icon** | Option<[**crate::models::File**](File.md)> | Custom icon attachment | [optional]
-**default_permissions** | Option<[**crate::models::OverrideField**](OverrideField.md)> | Default permissions assigned to users in this channel | [optional]
+**icon** | Option<[**crate::models::ChannelOneOf2Icon**](Channel_oneOf_2_icon.md)> |  | [optional]
+**default_permissions** | Option<[**crate::models::ChannelOneOf3DefaultPermissions**](Channel_oneOf_3_default_permissions.md)> |  | [optional]
 **role_permissions** | Option<[**::std::collections::HashMap<String, crate::models::OverrideField>**](OverrideField.md)> | Permissions assigned based on role to this channel | [optional]
 **nsfw** | Option<**bool**> | Whether this channel is marked as not safe for work | [optional]
 

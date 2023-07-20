@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**create_create_bot**](BotsApi.md#create_create_bot) | **POST** /bots/create | Create Bot
 [**delete_delete_bot**](BotsApi.md#delete_delete_bot) | **DELETE** /bots/{target} | Delete Bot
 [**edit_edit_bot**](BotsApi.md#edit_edit_bot) | **PATCH** /bots/{target} | Edit Bot
-[**fetch_fetch_bot**](BotsApi.md#fetch_fetch_bot) | **GET** /bots/{target} | Fetch Bot
+[**fetch_fetch_bot**](BotsApi.md#fetch_fetch_bot) | **GET** /bots/{bot} | Fetch Bot
 [**fetch_owned_fetch_owned_bots**](BotsApi.md#fetch_owned_fetch_owned_bots) | **GET** /bots/@me | Fetch Owned Bots
 [**fetch_public_fetch_public_bot**](BotsApi.md#fetch_public_fetch_public_bot) | **GET** /bots/{target}/invite | Fetch Public Bot
 [**invite_invite_bot**](BotsApi.md#invite_invite_bot) | **POST** /bots/{target}/invite | Invite Bot
@@ -107,7 +107,7 @@ Name | Type | Description  | Required | Notes
 
 ## fetch_fetch_bot
 
-> crate::models::BotResponse fetch_fetch_bot(target)
+> crate::models::FetchBotResponse fetch_fetch_bot(bot)
 Fetch Bot
 
 Fetch details of a bot you own by its id.
@@ -117,11 +117,11 @@ Fetch details of a bot you own by its id.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**target** | **String** |  | [required] |
+**bot** | **String** |  | [required] |
 
 ### Return type
 
-[**crate::models::BotResponse**](BotResponse.md)
+[**crate::models::FetchBotResponse**](FetchBotResponse.md)
 
 ### Authorization
 
