@@ -41,7 +41,7 @@ pub enum SetSettingsReqError {
 
 
 /// Fetch settings from server filtered by keys.  This will return an object with the requested keys, each value is a tuple of `(timestamp, value)`, the value is the previously uploaded data.
-pub async fn get_settings_req(configuration: &configuration::Configuration, options_fetch_settings: crate::models::OptionsFetchSettings) -> Result<::std::collections::HashMap<String, crate::models::Array>, Error<GetSettingsReqError>> {
+pub async fn get_settings_req(configuration: &configuration::Configuration, options_fetch_settings: crate::models::OptionsFetchSettings) -> Result<::std::collections::HashMap<String, serde_json::Value>, Error<GetSettingsReqError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

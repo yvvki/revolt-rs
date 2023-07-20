@@ -272,7 +272,7 @@ pub async fn fetch_report_fetch_report(configuration: &configuration::Configurat
 }
 
 /// Fetch all available reports
-pub async fn fetch_reports_fetch_reports(configuration: &configuration::Configuration, content_id: Option<&str>, author_id: Option<&str>, status: Option<ReportStatusString>) -> Result<Vec<crate::models::Report>, Error<FetchReportsFetchReportsError>> {
+pub async fn fetch_reports_fetch_reports(configuration: &configuration::Configuration, content_id: Option<&str>, author_id: Option<&str>, status: Option<crate::models::ReportStatusString>) -> Result<Vec<crate::models::Report>, Error<FetchReportsFetchReportsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
