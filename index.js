@@ -1,16 +1,16 @@
-import fs from 'fs'
+import fs from 'fs';
 
-import toml from '@ltd/j-toml'
+import toml from '@ltd/j-toml';
 
 // Deserialize
-const workspaceCargo = toml.parse(fs.readFileSync('Cargo.toml'))
-const openapiCargo = toml.parse(fs.readFileSync('crates/api/Cargo.toml'))
+const workspaceCargo = toml.parse(fs.readFileSync('Cargo.toml'));
+const openapiCargo = toml.parse(fs.readFileSync('crates/api/Cargo.toml'));
 
 // Me too :)
-const me = workspaceCargo['workspace']['package']['authors'][0]
+const me = workspaceCargo['workspace']['package']['authors'][0];
 
 if (!openapiCargo['package']['authors'].includes(me)) {
-  openapiCargo['package']['authors'].push(me)
+  openapiCargo['package']['authors'].push(me);
 }
 
 // Inherit the workspace package table.
@@ -25,4 +25,4 @@ fs.writeFileSync(
     newline: '\n',
     newlineAround: 'section',
   }).replaceAll('\'', '\"')
-)
+);
