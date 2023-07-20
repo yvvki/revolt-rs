@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yvvki/revolt-rs.git"
+    "url": "git+https://github.com/yvvki/revolute.git"
   },
   "keywords": [
     "revolt",
@@ -20,9 +20,9 @@
   "author": "Yuuki Rika",
   "license": "MIT OR Apache-2.0",
   "bugs": {
-    "url": "https://github.com/yvvki/revolt-rs/issues"
+    "url": "https://github.com/yvvki/revolute/issues"
   },
-  "homepage": "https://github.com/yvvki/revolt-rs#readme",
+  "homepage": "https://github.com/yvvki/revolute#readme",
   "devDependencies": {
     "@ltd/j-toml": "^1.38.0",
     "@openapitools/openapi-generator-cli": "^2.7.0"
