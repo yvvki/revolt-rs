@@ -13,6 +13,6 @@ description = "Rust typings for the Revolt API."
 repository = "https://github.com/yvvki/revolute"
 
 [workspace.dependencies]
-tokio = { version = "1.21", features = ["full"] }
+tokio = { version = "1.29", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = { version = "1.0" }
