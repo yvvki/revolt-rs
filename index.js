@@ -16,6 +16,9 @@ if (!apiCargo['package']['authors'].includes(me)) {
 // Inherit the workspace repository.
 apiCargo['package']['repository'] = { 'workspace': true };
 
+// Fix license
+apiCargo['package']['license'] = "AGPL-3.0-or-later";
+
 // Serialize
 fs.writeFileSync(
   'crates/api/Cargo.toml',

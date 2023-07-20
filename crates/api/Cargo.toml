@@ -4,7 +4,7 @@ name = "revolt_api"
 version = "0.6.5"
 authors = ["contact@revolt.chat", "Yuuki Rika <yvvki@duck.com>"]
 description = "Open source user-first chat platform."
-license = "AGPLv3"
+license = "AGPL-3.0-or-later"
 edition = "2018"
 repository.workspace = true
 
